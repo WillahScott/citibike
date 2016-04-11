@@ -1,3 +1,8 @@
+*.py[cod]
 *.zip
 
+# IPython Notebook checkpoints
 *.ipynb_checkpoints/*
+
+# Node packages
+citibike-viz/node_modules 
