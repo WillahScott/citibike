@@ -40,7 +40,7 @@
       <!-- Day of the week CHECKBOXES -->
       <div class="large-4 columns">
         <fieldset id="day">
-          <legend>Day of the week:</legend>
+          <legend><p>Day of the week</p></legend>
           <input id="checkbox2" type="checkbox" checked="checked"><label for="checkbox2">Weekdays</label>
           <input id="checkbox1" type="checkbox"  checked="checked"><label for="checkbox1" >Weekends</label>
         </fieldset>
@@ -49,7 +49,7 @@
       <div class="large-8 columns">
       <div class="row">
         
-        <div class="large-2 columns"><p>Started between:</p></div>
+        <div class="large-2 columns"><p>Between</p></div>
         
         <div class="large-2 columns"><input type="number" id="sliderStart"></div>
 
@@ -68,11 +68,19 @@
 
       <!-- Type of rider -->
       <div class="large-12 columns">
+      <div class="row">
+        
+        <div class="large-2 columns"><p>Type of biker</p></div>
+        
+        <div class="large-10 columns">
         <div class="button-group small expanded" id="viz-type">
           <a class="button secondary" name="Hours in One Day" id="bline">Subscribers</a>
           <a class="button primary" name="Days in a Week" id="bbar">Customer</a>
           <a class="button secondary" name="Historical Data" id="bline">All</a>
         </div>
+        </div>
+
+      </div>
       </div>
 
     </div>

@@ -87,6 +87,11 @@
 	background-color: lightgray;
   	background-color: scale-color(map-get($foundation-palette, secondary), $lightness: +90%);
 
+	p {
+		color: map-get($foundation-palette, primary);
+		font-weight: bold;
+	}
+
 	.button-group {
 		margin: 0;
 	}
@@ -94,12 +99,13 @@
 	// Deactivate bottom margin for the button group
 	#viz-type {
 		a {
-			width: 30%;
+			width: 25%;
 			margin: 3px;
 		}
 	}
 
 	#remap-button {
+		background-color: map-get($foundation-palette, highlight);
 		margin: 20px 10px 0 0px;
 		width: 90%;
 	}
