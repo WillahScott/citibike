@@ -1,14 +1,13 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viz gallery</title>
-    <link rel="stylesheet" href="css/app.css">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-  </head>
-  <body>
+
+<title>CitiBiker Maps</title>
+<!-- LeafletJS CDN -->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<!-- MapBox CDN -->
+<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+
+<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 
 <!-- TITLE Section -->
 <div class="row" id="head-title">
@@ -97,19 +96,16 @@
 
 <br />
 
-
-<br />
-
-
-
 <!-- Footer -->
 <footer class="footer">
   <div class="row full-width">
-    <div class="small-10 columns">
-      <i class="fi-laptop"></i>
-      <p>This page is part of a set of visualizations generated for the course Data Visualization and Communication (W209) course of the <a target="_blank" href="https://datascience.berkeley.edu/">MIDS program</a>.</p>
+    <div class="small-10 large-9 columns">
+      <div class="center" id="foot-text">
+        <i class="fi-laptop"></i>
+        <p>This page is part of a set of visualizations generated for the course Data Visualization and Communication (W209) course of the <a target="_blank" href="https://datascience.berkeley.edu/">MIDS program</a>.</p>
+      </div>
     </div>
-    <div class="small-2 columns">
+    <div class="small-2 large-3 columns">
       <a href="https://github.com/WillahScott" target="_blank">
         <i class="fi-social-github" id="git-icon"></i>
       </a>
