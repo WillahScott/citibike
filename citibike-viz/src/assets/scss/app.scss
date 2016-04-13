@@ -18,14 +18,14 @@
 @include foundation-button-group;
 @include foundation-callout;
 @include foundation-close-button;
-@include foundation-menu;
-@include foundation-menu-icon;
 @include foundation-drilldown-menu;
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
 @include foundation-flex-video;
 @include foundation-label;
 @include foundation-media-object;
+@include foundation-menu;
+@include foundation-menu-icon;
 @include foundation-off-canvas;
 @include foundation-orbit;
 @include foundation-pagination;
@@ -48,3 +48,262 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+
+.debug {
+    border: 3px solid orange;
+}
+
+#head-title {
+  color: scale-color(map-get($foundation-palette, primary), $lightness: -50%);
+  text-align: center;
+  font-weight: bold;
+}
+
+.center {
+    margin: auto;
+    padding: 10px;
+}
+
+#description {
+	width: 70%;
+}
+
+#maptainer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+	width: 90%;
+	height: 74vh;
+    border: 2px solid lightgray;
+}
+
+#dashboard {
+	margin-top: 0;
+	padding: 1em;
+	// padding-top: 0;
+	// height: 24vh;
+	width: 90%;
+	// vertical-align: middle;
+	background-color: lightgray;
+  	background-color: scale-color(map-get($foundation-palette, secondary), $lightness: +90%);
+
+	.button-group {
+		margin: 0;
+	}
+
+	// Deactivate bottom margin for the button group
+	#viz-type {
+		a {
+			width: 30%;
+			margin: 3px;
+		}
+	}
+
+	#remap-button {
+		margin: 20px 10px 0 0px;
+		width: 90%;
+	}
+
+}
+
+
+
+.sidebar {
+  margin-top: 1rem;
+
+h1, h3, h4, h5 {
+    color: map-get($foundation-palette, primary);
+  }
+  
+  p {
+    color: map-get($foundation-palette, secondary);
+  }
+}
+
+#viz-type {
+  a {
+    margin-bottom: 2em;    
+  }
+}
+
+[type='checkbox'] + label {
+  margin-right: .5rem;
+}
+
+
+#replot-btn {
+  background-color: scale-color(map-get($foundation-palette, primary), $lightness: -35%);
+}
+
+#viz-title {
+  color: scale-color(map-get($foundation-palette, primary), $lightness: -50%);
+}
+
+
+.footer {
+  background-color: scale-color(map-get($foundation-palette, secondary), $lightness: +60%);
+  padding: 0.1rem 1.2rem;
+  text-align: center;
+  color: #fff;
+  font-size: .9em;
+
+  a {
+    color: map-get($foundation-palette, primary);
+  }
+
+  i {
+    font-size: 2.5em;
+  }
+
+  #git-icon {
+    font-size: 5em;
+  }
+
+}
+
+
+#tooltip {
+  position: absolute;
+  width: 25%;
+  height: auto;
+  text-align: center;
+  padding: 3px;
+  border-radius: 3px;
+  color: map-get($foundation-palette, secondary);
+  background-color: scale-color(map-get($foundation-palette, primary), $lightness: +80%);
+  box-shadow: 4px 4px 10px scale-color(map-get($foundation-palette, secondary), $lightness: -50%);
+  pointer-events: none;
+
+}
+
+#tooltip .hidden {
+  display: none;
+}
+
+
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: scale-color(map-get($foundation-palette, primary), $lightness: +85%);
+  border-radius: 4px;
+  color: scale-color(map-get($foundation-palette, primary), $lightness: -50%);
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: #c7d9e8;
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+
+
+/* ***************** */
+/*    SVG style      */
+/* ***************** */
+
+// .viz {
+//   float: left;
+//   background-color: #e6f0ff;
+//   height: 800px;
+//   width: 600px;
+//   border: 3px dashed #002966;
+//   border-radius: 15px;
+//   margin-left: 20px;
+//   padding: 5px;
+
+//   h2, h3, h4 {
+//     text-align: center;
+//   }
+
+svg {
+  display: block;
+  margin: 5px;
+  padding-left: 30px;
+  padding-top: 10px;
+
+  rect {
+    fill: none;
+    pointer-events: all;
+  }
+
+}
+
+// }
+
+
+.bar {
+  fill: scale-color(map-get($foundation-palette, primary), $lightness: -35%);
+  stroke: white;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.bar:hover {
+  fill: map-get($foundation-palette, primary);
+}
+
+.line {
+  fill: none;
+  stroke: scale-color(map-get($foundation-palette, primary), $lightness: -35%);
+  stroke-width: 3px;
+}
+
+#focus {
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+
+  #circle {
+    fill: map-get($foundation-palette, highlight);
+    stroke: map-get($foundation-palette, highlight);
+    stroke-width: 2px;
+  }
+
+  text {
+    stroke: scale-color(map-get($foundation-palette, highlight), $lightness: -30%);
+    stroke-width: 1.5px;
+    opacity: .8;
+  }
+
+  .x, .y {
+    stroke: map-get($foundation-palette, secondary);
+    stroke-dasharray: 5,3;
+    opacity: 0.5;
+  }
+
+}
+
+.axis {
+  fill: map-get($foundation-palette, secondary);
+
+  path, line {
+    fill: none;
+    stroke: map-get($foundation-palette, secondary);
+    shape-rendering: crispEdges;
+  }
+
+}
+
+
+
+
+
