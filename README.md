@@ -1,5 +1,8 @@
 # Citi-Bike Data Visualization
 
+Head over to the [webviz](https://htmlpreview.github.io/?https://github.com/WillahScott/citibike/blob/master/citibike-viz/index.html) to see the cool map!
+
+
 This project is an exploration into map visualizations in Javascript using [LeafletJS](http://leafletjs.com/) and [MapBox](https://www.mapbox.com/).  
 
 ### Data  
