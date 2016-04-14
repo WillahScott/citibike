@@ -58,7 +58,10 @@ def process_files(in_files, out_files=None, verbose=False):
 
 		in_data = pd.read_csv(in_)
 		out_data = data_munger(in_data)
-		out_data.to_csv(out_)
+		json = out_data.to_json()
+
+		with open(out_, 'wb') as f:
+			f.write('var data = ' + json + ';')
 
 		if verbose:
 			print('   DONE -> {}\n'.format(out_))
@@ -70,7 +73,7 @@ def process_files(in_files, out_files=None, verbose=False):
 def main():
 	# get list of all csv's in DATA_PATH/raw
 	in_csv = glob.glob(DATA_PATH + 'raw/*.csv')
-	out_csv = map( lambda x: x.replace('raw/','processed/').replace(' ',''), in_csv )
+	out_csv = map( lambda x: x.replace('raw/','processed/').replace(' ','').replace('csv','js'), in_csv )
 
 	print( '\nProcessing {} files:\n'.format(len(in_csv)) )
 
