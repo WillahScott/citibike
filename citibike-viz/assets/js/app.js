@@ -18629,7 +18629,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 "use strict";
 
 // var data = { "weekday": { "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "11": 0, "12": 0, "13": 0, "14": 0, "15": 0, "16": 0, "17": 0, "18": 0 }, "time": { "0": 0, "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "11": 0, "12": 0, "13": 0, "14": 0, "15": 0, "16": 0, "17": 0, "18": 0 }, "duration": { "0": 2, "1": 2, "2": 0, "3": 2, "4": 2, "5": 2, "6": 1, "7": 0, "8": 2, "9": 2, "10": 1, "11": 2, "12": 2, "13": 0, "14": 2, "15": 2, "16": 1, "17": 2, "18": 1 }, "usertype": { "0": "Customer", "1": "Customer", "2": "Subscriber", "3": "Customer", "4": "Subscriber", "5": "Subscriber", "6": "Customer", "7": "Subscriber", "8": "Subscriber", "9": "Subscriber", "10": "Subscriber", "11": "Subscriber", "12": "Customer", "13": "Subscriber", "14": "Customer", "15": "Customer", "16": "Subscriber", "17": "Subscriber", "18": "Customer" }, "start_lat": { "0": 40.75323098, "1": 40.749717753, "2": 40.73028666, "3": 40.71893904, "4": 40.73492695, "5": 40.72938685, "6": 40.73028666, "7": 40.71146364, "8": 40.72621788, "9": 40.76064679, "10": 40.71625008, "11": 40.72317958, "12": 40.76019252, "13": 40.73221853, "14": 40.76019252, "15": 40.7451677, "16": 40.75640548, "17": 40.74345335, "18": 40.74734825 }, "start_lon": { "0": -73.97032517, "1": -74.002950346, "2": -73.9907647, "3": -73.99266288, "4": -73.99200509, "5": -73.97772429, "6": -73.9907647, "7": -74.00552427, "8": -73.98379855, "9": -73.98442659, "10": -74.0091059, "11": -73.99480012, "12": -73.9912551, "13": -73.98165557, "14": -73.9912551, "15": -73.98683077, "16": -73.9900262, "17": -74.00004031, "18": -73.99723551 }, "end_lat": { "0": 40.73221853, "1": 40.746745, "2": 40.73047309, "3": 40.76915505, "4": 40.72066442, "5": 40.75455731, "6": 40.72521311, "7": 40.70862144, "8": 40.73047747, "9": 40.76019252, "10": 40.70530954, "11": 40.71427487, "12": 40.7568001, "13": 40.73314259, "14": 40.7568001, "15": 40.72710258, "16": 40.75038009, "17": 40.76227205, "18": 40.751396 }, "end_lon": { "0": -73.98165557, "1": -74.007756, "2": -73.98672378, "3": -73.98191841, "4": -73.98517977, "5": -73.96592976, "6": -73.97768752, "7": -74.00722156, "8": -73.99906065, "9": -73.9912551, "10": -74.00612572, "11": -73.98990025, "12": -73.98291153, "13": -73.97573881, "14": -73.98291153, "15": -74.00297088, "16": -73.98338988, "17": -73.98788205, "18": -74.005226 } };
-'use strict';
+// 'use strict';
 
 $(document).foundation();
 
@@ -18719,22 +18719,22 @@ var lighten = function (e) {
 };
 
 // Markers on map
-var mark1 = L.marker([40.7205, -73.992], { icon: startIcon, opacity: DEFAULT_OPACITY, title: 'START!', alt: 150 });
-mark1.on('mouseover', darken);
-mark1.on('mouseout', lighten);
-mark1.on('click', onClick);
-mark1.addTo(map);
+// var mark1 = L.marker([40.7205, -73.992], { icon: startIcon, opacity: DEFAULT_OPACITY, title: 'START!', alt: 150 });
+// mark1.on('mouseover', darken);
+// mark1.on('mouseout', lighten);
+// mark1.on('click', onClick);
+// mark1.addTo(map);
 
-var mark2 = L.marker([40.7205, -73.986], { icon: endIcon, opacity: DEFAULT_OPACITY, title: 'END!', alt: 200 });
-mark2.on('mouseover', darken);
-mark2.on('mouseout', lighten);
-mark2.on('click', onClick);
-mark2.addTo(map);
+// var mark2 = L.marker([40.7205, -73.986], { icon: endIcon, opacity: DEFAULT_OPACITY, title: 'END!', alt: 200 });
+// mark2.on('mouseover', darken);
+// mark2.on('mouseout', lighten);
+// mark2.on('click', onClick);
+// mark2.addTo(map);
 
 var plot_markers = function (markers) {
 
 	map.eachLayer(function (layer) {
-		map.removeLayer(layer);
+		if ('_icon' in layer) { map.removeLayer(layer); }
 	});
 	// var all_markers = [];
 
@@ -18772,11 +18772,9 @@ var plot_markers = function (markers) {
 // Initialize configuration object
 var config_object = { hours: [0, 23] };
 
-alert(config_object);
 
 // Update USERTYPE
 $('#user-type>a').on("click", function () {
-	console.log('You just hit a new usertype...!');
 	$('#user-type>a').removeClass("primary").addClass("secondary");
 	$(this).removeClass("secondary").addClass("primary");
 
@@ -18795,11 +18793,11 @@ $("#remap-button").on("click", function () {
 	// config_object['hours'] = [$('#sliderStart').value, $('#sliderEnd').value]
 
 	// Get filter_configuration (read WEEKDAY)
-	if ($('#wdaybox')[0].checked && $('#wendbox')[0].checked) {
-		delete config_object['weekday'];
-	} else {
-		config_object['weekday'] = $('#wdaybox').checked;
-	}
+	// if ($('#wdaybox')[0].checked && $('#wendbox')[0].checked) {
+	// 	delete config_object['weekday'];
+	// } else {
+	// 	config_object['weekday'] = $('#wdaybox').checked;
+	// }
 
 	var markers_to_plot = reprocess_data(config_object);
 

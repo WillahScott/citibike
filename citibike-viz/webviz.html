@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+
+    <!doctype html>
+    <html class="no-js" lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Viz gallery</title>
+        <link rel="stylesheet" href="css/app.css">
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+      </head>
+      <body>
+    
+        <div class="row">
+          <div class="large-4 medium-4 hide-for-small columns">
+            <div class="sidebar">
+    
+              <div class="primary callout">
+                <h3 class="primary">How do <strong>you</strong> search?</h3>
+                <p>Our search history can show us patterns in our usage of the <em>great</em> Google.</p>
+                <p>For example are there any differences between your weekend and weekday usage? How about summer and winter?</p>            
+              </div>
+    
+              <div class="callout">
+                <!-- <h5 class="text-right">Interact!</h4> -->
+    
+                <p>Data view:</p>
+                <div class="button-group small expanded" id="viz-type">
+                  <a class="button secondary" name="Hours in One Day" id="bline">Day<br>Hours</a>
+                  <a class="button primary" name="Days in a Week" id="bbar">Week<br>Days</a>
+                  <!-- <a class="button secondary" name="Days in a Month" data="month">Month<br>Days</a> -->
+                  <a class="button secondary" name="Historical Data" id="bline">All<br>History</a>
+                </div>
+    
+                <hr>
+    
+                <p>Filters:</p>
+                <fieldset id="radio-week">
+                  <legend>Filter day of the week</legend>
+                  <input id="checkbox2" type="checkbox" checked="checked"><label for="checkbox2">S</label>
+                  <input id="checkbox1" type="checkbox"  checked="checked"><label for="checkbox1" >M</label>
+                  <input id="checkbox2" type="checkbox" checked="checked"><label for="checkbox2">T</label>
+                  <input id="checkbox1" type="checkbox"  checked="checked"><label for="checkbox1" >W</label>
+                  <input id="checkbox2" type="checkbox" checked="checked"><label for="checkbox2">T</label>
+                  <input id="checkbox1" type="checkbox"  checked="checked"><label for="checkbox1" >F</label>
+                  <input id="checkbox2" type="checkbox" checked="checked"><label for="checkbox2">S</label>
+                </fieldset>
+    
+                <div class="row">
+                  <div class="large-8 columns">
+                    <fieldset>
+                      <legend>Filter season</legend>
+                      <input id="checkbox2" type="checkbox"  checked="checked"><label for="checkbox2">Winter</label>
+                      <input id="checkbox1" type="checkbox"  checked="checked"><label for="checkbox1">Summer</label>
+                    </fieldset>
+                  </div>
+                  <div class="large-4 columns">
+                    <br>
+                    <a id="replot-btn" class="button small ">Re-Plot &#8688;</a></p>           
+                  </div>
+                </div>
+    
+              
+    <!-- OFF CANVAS Side Panel 
+      <div id="side-panel">
+        <h3>Search Data</h3>
+        <p>The following viz plots the amount and frequency of searches I performed in the past <em>specify here</em>.</p>
+        <h4>Download your own data:</h4>
+        <ul>
+          <li>Go to <a target="_blank" href="https://history.google.com/history/?utm_source=help">Web &amp; App Activity</a></li>
+          <li>Click on <b>Menu</b></li>
+          <li>Select <b>Download searches</b></li>
+          <li>Check your email...</li>
+        </ul>
+        <p>...within a couple minutes you will recieve the location of your data.</p>
+      </div>
+    
+      -->
+              </div>
+    
+            </div>
+          </div>
+    
+    
+    
+          <div class="large-8 medium-8 small-12 columns" id="viz-canvas">
+    
+            <!-- Viz - SVG Canvas -->
+              <h2 class="text-center" id="viz-title">Days in a Week</h2>
+              <!-- <svg></svg> -->
+    
+          </div>
+        
+        </div>
+    
+    
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="row full-width">
+        <div class="small-10 columns">
+          <i class="fi-laptop"></i>
+          <p>This page is part of a set of visualizations generated for the course Data Visualization and Communication (W209) course of the <a target="_blank" href="https://datascience.berkeley.edu/">MIDS program</a>.</p>
+        </div>
+        <div class="small-2 columns">
+          <a href="https://github.com/WillahScott" target="_blank">
+            <i class="fi-social-github" id="git-icon"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+    
+    <!-- Run JavaScript -->
+      <script type="text/javascript" src="data/data2.json"></script>
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/what-input/what-input.js"></script>
+      <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+      <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+      <script src="js/app.js"></script>
+    
+    
+      </body>
+    </html>
+    
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

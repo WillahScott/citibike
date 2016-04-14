@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/app.css">
   </head>
   <body>
+
     
     <!-- LeafletJS CDN -->
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
@@ -17,7 +18,11 @@
     <!-- MapBox CDN -->
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
-        
+    
+    <!-- jQuery.CSV CDN 
+    <script src='https://cdn.rawgit.com/evanplaice/jquery-csv/master/src/jquery.csv.min.js'></script>
+    -->
+    
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     
     <!-- TITLE Section -->
@@ -30,7 +35,10 @@
     <!-- DESCRIPTION Section -->
     <div class="row center" id="description">
       <p>The following map was created using LeafletJS and MapBox. The data can be downloaded from the <a href="https://www.citibikenyc.com/system-data">CitiBike website</a>.</p>
+      <p>With the following map, try to identify if there are different trends between the type of CitiBike riders: the one-time (tourists?) customers, and the subscibers (all those wonderful NY Mets fans, and unfortunately some of those Yankee fans as well).</p>
+      <p>Make sure to come back soon, as we are in the works of adding additional filtering dimensions like: duration of trip, time of day, weekday vs weekend ... And that's just a sneak peak!</p>
       <p>Patterns identified can tell us a lot about people... but data analysis can also be beautiful, specially with maps!</p>
+      <p><strong>...Happy Mapping!</strong></p>
     </div> 
     
     <br />
@@ -48,14 +56,14 @@
         <div class="large-10 columns">
         <div class="row">
           <!-- Day of the week CHECKBOXES -->
-          <div class="large-4 columns">
+<!--           <div class="large-4 columns">
             <fieldset id="day">
               <legend><p>Day of the week</p></legend>
               <input id="wdaybox" type="checkbox" checked="checked"><label for="checkbox2">Weekdays</label>
               <input id="wendbox" type="checkbox"  checked="checked"><label for="checkbox1" >Weekends</label>
             </fieldset>
           </div>
-          <!-- Time of day SLIDER -->
+          <!- - Time of day SLIDER 
           <div class="large-8 columns">
           <div class="row">
             
@@ -74,11 +82,11 @@
             <div class="large-2 columns"><input type="number" id="sliderEnd"></div>
     
           </div>
-          </div>
+          </div> -->
     
           <!-- Type of rider -->
           <div class="large-12 columns">
-          <div class="row">
+          <div class="row" style="height: 15vh; padding-top: 3%;">
             
             <div class="large-2 columns"><p>Type of biker</p></div>
             
@@ -124,8 +132,10 @@
       </div>
     </footer>
     
-    <!-- <script src="assets/data/2014-02-CitiBiketripdata.js"</script> -->
-    <script src="assets/data/lines20.js"</script>
+    <!-- <script src="assets/js/lines20.js"</script> -->
+    
+
+    <script src="assets/data/tripdata.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
